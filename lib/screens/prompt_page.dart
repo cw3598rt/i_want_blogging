@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
 
-class PromptScreen extends StatefulWidget {
+import 'package:i_want_blogging/widgets/prompt_form.dart';
+
+class PromptScreen extends StatelessWidget {
   PromptScreen({super.key});
 
-  @override
-  State<PromptScreen> createState() {
-    return _PromptScreenState();
-  }
-}
-
-class _PromptScreenState extends State<PromptScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Prompt Forms"),
+        backgroundColor: Colors.yellowAccent.shade100,
       ),
-      body: Text("aaa"),
+      body: PromptForm(),
     );
   }
 }
