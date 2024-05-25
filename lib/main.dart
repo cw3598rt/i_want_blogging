@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+// import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:i_want_blogging/screens/home_page.dart';
 
 Future main() async {
-  await dotenv.load(fileName: "assets/env");
-  Gemini.init(apiKey: "${dotenv.env['GEMINI']}");
+  // await dotenv.load(fileName: "assets/env");
+  Gemini.init(apiKey: "AIzaSyDbiYx54k_1-G1Re3xW1hMLa14bwzeIj9A");
   runApp(
     const ProviderScope(
       child: MyApp(),
