@@ -4,7 +4,6 @@ import 'package:path_provider/path_provider.dart' as syspaths;
 import 'package:flutter/material.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:markdown_widget/markdown_widget.dart';
-import 'package:syncfusion_flutter_pdf/pdf.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 
@@ -66,25 +65,6 @@ class _BloggingResultScreenState extends State<BloggingResultScreen> {
         ),
       );
     }
-
-//     final PdfDocument document = PdfDocument();
-// // Add a PDF page and draw text.
-//     if (widget.contents != null) {
-//       document.pages.add().graphics.drawString(
-//             widget.contents!,
-//             PdfStandardFont(PdfFontFamily.helvetica, 12),
-//             brush: PdfSolidBrush(PdfColor(0, 0, 0)),
-//             bounds: Rect.fromLTRB(0, 0, double.infinity, double.infinity),
-//           );
-// // Save the document.
-//       final appDir = await syspaths.getApplicationDocumentsDirectory();
-
-//       File("${appDir.path}/myPdf.pdf").writeAsBytes(await document.save());
-
-// // Dispose the document.
-
-//       document.dispose();
-    // }
   }
 
   @override
