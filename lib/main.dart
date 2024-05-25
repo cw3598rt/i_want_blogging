@@ -1,24 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:i_want_blogging/screens/home_page.dart';
 
-void main() {
-  runApp(const MyApp());
+Future main() async {
+  await dotenv.load(fileName: ".env");
+  Gemini.init(apiKey: "${dotenv.env['GEMINI']}");
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'AI BLOGGING',
       theme: ThemeData(
-       
-        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 117, 204, 248)),
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 255, 190, 116)),
         useMaterial3: true,
       ),
-      home:...,
+      home: HomePageScreen(),
     );
   }
 }
-
