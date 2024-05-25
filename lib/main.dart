@@ -6,7 +6,7 @@ import 'package:i_want_blogging/screens/home_page.dart';
 
 Future main() async {
   await dotenv.load(fileName: "assets/env");
-  Gemini.init(apiKey: "${dotenv.env['GEMINI']}");
+  Gemini.init(apiKey: "AIzaSyDbiYx54k_1-G1Re3xW1hMLa14bwzeIj9A");
   runApp(
     const ProviderScope(
       child: MyApp(),
