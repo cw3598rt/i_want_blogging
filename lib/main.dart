@@ -5,7 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:i_want_blogging/screens/home_page.dart';
 
 Future main() async {
-  await dotenv.load(fileName: ".env");
+  await dotenv.load(fileName: "assets/env");
   Gemini.init(apiKey: "${dotenv.env['GEMINI']}");
   runApp(
     const ProviderScope(
