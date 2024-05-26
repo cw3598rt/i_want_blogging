@@ -92,11 +92,11 @@ class _BloggingResultScreenState extends State<BloggingResultScreen> {
                 return Column(
                   children: [
                     MarkdownBlock(data: response),
-                    if (Platform.isAndroid || Platform.isIOS)
-                      ElevatedButton.icon(
-                          onPressed: () => extractPdf(response),
-                          icon: Icon(Icons.picture_as_pdf),
-                          label: Text("save as pdf")),
+                    // if (Platform.isAndroid || Platform.isIOS)
+                    //   ElevatedButton.icon(
+                    //       onPressed: () => extractPdf(response),
+                    //       icon: Icon(Icons.picture_as_pdf),
+                    //       label: Text("save as pdf")),
                   ],
                 );
               } else {
