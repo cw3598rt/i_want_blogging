@@ -296,12 +296,9 @@ class _PromptFormState extends State<PromptForm> {
                   SizedBox(
                     height: 16,
                   ),
-                  Hero(
-                    tag: "result",
-                    child: ElevatedButton(
-                      onPressed: onTapSubmit,
-                      child: Text("Submit"),
-                    ),
+                  ElevatedButton(
+                    onPressed: onTapSubmit,
+                    child: Text("Submit"),
                   ),
                   SizedBox(
                     height: 16,

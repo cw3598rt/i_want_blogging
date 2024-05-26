@@ -74,40 +74,37 @@ class _BloggingResultScreenState extends State<BloggingResultScreen> {
         title: Text("Blogging By AI"),
         backgroundColor: Colors.yellowAccent.shade100,
       ),
-      body: Hero(
-        tag: "result",
-        child: Container(
-          padding: EdgeInsets.all(50),
-          decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [
-            Colors.yellowAccent.shade100,
-            Colors.orange.shade100
-          ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
-          child: ListView(children: [
-            GeminiResponseTypeView(
-              builder: (context, child, response, loading) {
-                if (loading) {
-                  return CircularProgressIndicator();
-                }
+      body: Container(
+        padding: EdgeInsets.all(50),
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: [Colors.yellowAccent.shade100, Colors.orange.shade100],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter)),
+        child: ListView(children: [
+          GeminiResponseTypeView(
+            builder: (context, child, response, loading) {
+              if (loading) {
+                return CircularProgressIndicator();
+              }
 
-                if (response != null) {
-                  return Column(
-                    children: [
-                      MarkdownBlock(data: response),
-                      ElevatedButton.icon(
-                          onPressed: () => extractPdf(response),
-                          icon: Icon(Icons.picture_as_pdf),
-                          label: Text("save as pdf")),
-                    ],
-                  );
-                } else {
-                  /// idle state
-                  return const Center(child: Text('Search something!'));
-                }
-              },
-            ),
-          ]),
-        ),
+              if (response != null) {
+                return Column(
+                  children: [
+                    MarkdownBlock(data: response),
+                    ElevatedButton.icon(
+                        onPressed: () => extractPdf(response),
+                        icon: Icon(Icons.picture_as_pdf),
+                        label: Text("save as pdf")),
+                  ],
+                );
+              } else {
+                /// idle state
+                return const Center(child: Text('Search something!'));
+              }
+            },
+          ),
+        ]),
       ),
     );
   }
