@@ -1,16 +1,13 @@
 # i_want_blogging
 
-A new Flutter project.
+재미삼아 만들어본 앱 
+블로그를 써보고는 싶은데 작성하는데 어려움을 겪는 사람들을 위해 만들어 보았지만 사실 여러 목적으로 ai를 통해 글을 작성해야 할때 사용하면 좋을 것 같네요
+https://i-want-blogging.vercel.app/
+일단 배포는 웹으로 먼저 해보았습니다.  추후에 앱스토어에도 올려보려고 합니다.
 
-## Getting Started
+제미니 sdk 를 이용해서 만들었습니다. 
 
-This project is a starting point for a Flutter application.
+최근 프롬프트 관련해서 공부한 부분을 이용해서 지극히 개인적인 용도로 만들어 보았습니다.
+답변이 꽤 괜찮네요!
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
